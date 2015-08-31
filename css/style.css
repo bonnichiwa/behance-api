@@ -3,11 +3,12 @@
   padding: 3em;
   width: 600px;
   background-color: steelblue;
+  border-radius: 15px;
 }
 
-/*.hidden {
+.hidden {
   display: none;
-}*/
+}
 
 
 body {
