@@ -59,3 +59,7 @@ dd {
   font-family: 'Josefin Sans';
   margin-left: 1em;
 }
+
+#geolocation {
+  color: black;
+}
