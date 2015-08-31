@@ -1,10 +1,17 @@
 .container {
   margin: 3em auto;
+  padding: 3em;
   width: 600px;
+  background-color: steelblue;
 }
 
-.hidden {
+/*.hidden {
   display: none;
+}*/
+
+
+body {
+  color: white;
 }
 
 h1, h3 {
@@ -14,4 +21,40 @@ h1, h3 {
 
 p {
   font-family: 'Josefin Sans';
+}
+
+dl {
+  width: 150px;
+  background-color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+dt {
+  font-family: 'Josefin Sans';
+  font-weight: 600;
+  line-height: 150%;
+  margin-left: 10px;
+  color: darkgray;
+}
+
+dd {
+  font-family: 'Josefin Sans';
+  line-height: 150%;
+  margin-left: 150px;
+  color: black;
+}
+
+#button {
+  font-size: 1em;
+  color: steelblue;
+  padding: .5em .75em;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  font-family: 'Josefin Sans';
+  margin-left: 1em;
 }

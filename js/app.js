@@ -6,6 +6,16 @@ $(document).ready(function(){
   });
 });
 
+var getUsers = function(area) {
+  var request = {q: area,
+    site: 'behance',
+    sort: 'appreciations'
+  };
+
+  var result = $.ajax({
+    url: "https://api.behance.net/v2/users?q=matias&client_id=1234567890"
+  })
+}
 
 
 // require(['be'], function(be) {
