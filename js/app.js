@@ -34,6 +34,9 @@ var showUsers = function(user) {
   displayUser.text(user.display_name);
   console.log(user.display_name);
 
+  var currentLocation = result.find('.area');
+  currentLocation.text(user.location);
+
   return result;
 };
 
