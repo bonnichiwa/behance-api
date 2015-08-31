@@ -37,6 +37,14 @@ var showUsers = function(user) {
   var currentLocation = result.find('.area');
   currentLocation.text(user.location);
 
+  var specialty_1 = result.find('#field-1');
+  specialty_1.text(user.fields[0]);
+  var specialty_2 = result.find('#field-2');
+  specialty_2.text(user.fields[1]);
+  var specialty_3 = result.find('#field-3');
+  specialty_3.text(user.fields[2]);
+  console.log(user.fields[0] + ", " + user.fields[1] + ", " + user.fields[2]);  
+
   return result;
 };
 
