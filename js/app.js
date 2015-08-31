@@ -28,6 +28,9 @@ var showUsers = function(user) {
 
   var result = $('.templates .search').clone();
 
+  var profilePic = result.find('.profile-pic img');
+  profilePic.attr('src', user.images[115]);
+
   var displayUser = result.find('.username a');
   displayUser.attr('href', user.url);
   console.log(user.url);
@@ -44,6 +47,7 @@ var showUsers = function(user) {
   var specialty_3 = result.find('#field-3');
   specialty_3.text(user.fields[2]);
   console.log(user.fields[0] + ", " + user.fields[1] + ", " + user.fields[2]);  
+
 
   return result;
 };
