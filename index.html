@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Behance Befriends</title>
+
+  <!-- CSS style-->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Javascript -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="app.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="intro">
+        <h1>Behance Befriends</h1>
+        <p>Want to connect with others and work on a cool project? Find locals in your area to collaborate with!</p>
+    </div>
+    <hr>
+    <div class="search-box">
+    <h3>Search by area:</h3>
+      <form class="search-area" onsubmit="return false;">
+        <input type="text" placeholder='e.g., "Brooklyn" or "Toronto"' name="area" size="30" autofocus required>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="results-container">
+      <div class="search-results"></div>
+      <div class="results"></div>
+    </div>
+  </div>
+
+  <div class="templates hidden">
+    <dl class="result search">
+      <dt>Username:</dt>
+        <dd class="username"><a href="" target="_blank"></a></dd>
+      <dt>Sneak Peek:</dt>
+        <dd class="images"><img src="">
+      <dt>Area:</dt>
+        <dd class="area"></dd>
+      <dt>Fields:</dt>
+        <dd class="fields"></dd>
+      <dt>A Little Background Info:</dt>
+        <dd class="411"></dd>
+    </dl>
+    <div class="error">
+      <p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+    </div>
+  </div>
+</body>
+</html>
