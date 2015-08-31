@@ -10,7 +10,6 @@
   display: none;
 }
 
-
 body {
   color: white;
 }
@@ -25,9 +24,8 @@ p {
 }
 
 dl {
-  width: 150px;
+  width: 200px;
   background-color: white;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
@@ -44,7 +42,6 @@ dt {
 dd {
   font-family: 'Josefin Sans';
   line-height: 150%;
-  margin-left: 150px;
   color: black;
 }
 
@@ -54,12 +51,15 @@ dd {
   padding: .5em .75em;
   background-color: white;
   border-radius: 10px;
-  text-align: center;
   border: none;
   font-family: 'Josefin Sans';
   margin-left: 1em;
 }
 
 #geolocation {
+  color: black;
+}
+
+.result {
   color: black;
 }

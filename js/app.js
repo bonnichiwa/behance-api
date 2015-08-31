@@ -22,7 +22,7 @@ var showError = function(error){
   errorElem.append(errorText);
 };
 
-// --- Getting Users --- //
+// --- Showing Users --- //
 var showUsers = function(user) {
   console.log("Reached showUsers function");
 
@@ -30,8 +30,14 @@ var showUsers = function(user) {
 
   var displayUser = result.find('.username a');
   displayUser.attr('href', user.url);
+  console.log(user.url);
   displayUser.text(user.display_name);
-}
+  console.log(user.display_name);
+
+  return result;
+};
+
+// --- Getting Users --- //
 
 var getUsers = function(area) {
   console.log("reached getUsers");
@@ -47,10 +53,11 @@ var getUsers = function(area) {
     dataType: "jsonp"
   })
   .done(function(result) {
+    console.log(result);
     console.log("Found results");
 
     $.each(result.users, function(i, item){
-      console.log(result.users);
+      console.log("Found result users");  
       var user = showUsers(item);
       $('.results').append(user);
     });
