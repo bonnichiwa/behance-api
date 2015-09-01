@@ -8,15 +8,12 @@ $(document).ready(function(){
 }, "jsonp");
 
   $('.run-search').submit(function(event){
-    $('.results').html('');
-    getUsers(area);
-    console.log("search button pressed");
-  })
-
-  $('.search-field').submit(function(event){
-    var field = document.getElementById("drop-down");
-    var selection = field.options[field.selectedIndex].text;
+    var selection = document.getElementById("drop-down");
+    field = selection.options[selection.selectedIndex].text;
     console.log(selection);
+    $('.results').html('');
+    getUsers(area, field);
+    console.log("search button pressed");
   })
     
 });
@@ -61,16 +58,17 @@ var showUsers = function(user) {
 
 // --- Getting Users --- //
 
-var getUsers = function(area) {
+var getUsers = function(area, field) {
   console.log("reached getUsers");
   var request = {
     city: area,
+    field: field,
     sort: 'views',
     client_id: 'g9hggzThToiGPThHB94XNUhzwkALb8N5'
   };
 
   var result = $.ajax({
-    url: "http://www.behance.net/v2/users?client_id=" + request.client_id + "&sort=" + request.sort + "&city=" + request.city,
+    url: "http://www.behance.net/v2/users?client_id=" + request.client_id + "&sort=" + request.sort + "&city=" + request.city + "&field=" + field,
     data: request,
     dataType: "jsonp"
   })

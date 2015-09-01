@@ -49,6 +49,14 @@ hr {
 
 /* Search results */
 
+.search-field {
+  text-align: center;
+}
+
+#drop-down {
+  margin-top: 1em;
+}
+
 dl {
   width: 200px;
   background-color: white;
@@ -79,7 +87,6 @@ dd {
   border-radius: 10px;
   border: none;
   font-family: 'Josefin Sans';
-  margin-left: 1em;
 }
 
 .result {
