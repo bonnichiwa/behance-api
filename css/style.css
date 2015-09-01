@@ -1,7 +1,7 @@
 .container {
   margin: 3em auto;
   padding: 3em;
-  width: 600px;
+  max-width: 30em;
   background-color: steelblue;
   border-radius: 15px;
 }
@@ -40,12 +40,11 @@ hr {
 /*  ul {list-style: none;padding: 0px;margin: 0px;}*/
 #drop-down {
   font-size: 1em;
-  background-color: darkblue;
+  background-color: darkslateblue;
   color: white;
-  border: none;
+  border: solid .5em darkslateblue;
   font-family: 'Josefin Sans';
 }
-
 
 /* Search results */
 
