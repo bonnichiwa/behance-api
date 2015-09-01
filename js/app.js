@@ -7,7 +7,7 @@ $(document).ready(function(){
   })
 
   $.get("http://ipinfo.io", function (response) {
-    $("#address").html("Location: " + response.city + ", " + response.region);
+    $("#address").html( response.city + ", " + response.region);
     console.log("Current location: " + response.city);
 }, "jsonp");
     

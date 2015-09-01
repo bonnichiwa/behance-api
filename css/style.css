@@ -6,6 +6,10 @@
   border-radius: 15px;
 }
 
+.template {
+  column-count: 2;
+}
+
 .hidden {
   display: none;
 }
@@ -19,8 +23,17 @@ h1, h3 {
   font-weight: 400;
 }
 
-p {
+p, #geolocation {
   font-family: 'Josefin Sans';
+}
+
+#geo {
+  color: white;
+  text-align: center;
+}
+
+hr {
+  max-width: 30em;
 }
 
 dl {
