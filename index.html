@@ -27,13 +27,35 @@
     </div>
     <hr>
 
+    <div class="search-field">
+      <h3>Choose a creative field:</h3>
+      <form name="creative-field">
+        <div align="left">
+          <select id="drop-down" name="mydropdown">
+            <option value="Milk">Fresh Milk</option>
+            <option value="Cheese">Old Cheese</option>
+            <option value="Bread">Hot Bread</option>
+            <input type="submit" value="submit">
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <hr>
+
     <div class="search-box">
+      <form class="run-search" onsubmit="return false;">
+        <input id="button" type="submit" value="Find Creatives Now!">
+      </form>
+    </div>
+
+ <!--    <div class="search-box">
     <h3>Search by area:</h3>
       <form class="search-area" onsubmit="return false;">
         <input type="text" placeholder='e.g., "Brooklyn" or "Toronto"' name="area" size="30" autofocus required>
         <input id="button" type="submit" value="Submit">
       </form>
-    </div>
+    </div> -->
     <div class="results-container">
       <div class="search-results"></div>
       <div class="results"></div>

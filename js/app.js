@@ -1,17 +1,24 @@
 $(document).ready(function(){
-  $('.search-area').submit(function(event){
+
+  $.get("http://ipinfo.io", function (response) {
+    area = response.city;
+    $("#address").html( response.city + ", " + response.region);
+    console.log(area);
+    console.log("Current location: " + response.city);
+}, "jsonp");
+
+  $('.run-search').submit(function(event){
     $('.results').html('');
-    var area = $(this).find("input[name='area']").val();
     getUsers(area);
     console.log("search button pressed");
   })
 
-  $.get("http://ipinfo.io", function (response) {
-    $("#address").html( response.city + ", " + response.region);
-    console.log("Current location: " + response.city);
-}, "jsonp");
+  $('.search-field').submit(function(event){
+    var field = document.getElementById("drop-down");
+    var selection = field.options[field.selectedIndex].text;
+    console.log(selection);
+  })
     
-
 });
 
 
@@ -58,7 +65,7 @@ var getUsers = function(area) {
   console.log("reached getUsers");
   var request = {
     city: area,
-    sort: 'appreciations',
+    sort: 'views',
     client_id: 'g9hggzThToiGPThHB94XNUhzwkALb8N5'
   };
 

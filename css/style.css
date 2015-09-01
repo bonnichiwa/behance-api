@@ -27,14 +27,27 @@ p, #geolocation {
   font-family: 'Josefin Sans';
 }
 
-#geo {
-  color: white;
+#geolocation {
   text-align: center;
 }
 
 hr {
   max-width: 30em;
 }
+
+/* Drop down list */
+
+/*  ul {list-style: none;padding: 0px;margin: 0px;}*/
+#drop-down {
+  font-size: 1em;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  font-family: 'Josefin Sans';
+}
+
+
+/* Search results */
 
 dl {
   width: 200px;
@@ -69,11 +82,13 @@ dd {
   margin-left: 1em;
 }
 
-#geolocation {
-  color: black;
-}
-
 .result {
   color: black;
   border-radius: 15px;
+}
+
+.run-search {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
 }
