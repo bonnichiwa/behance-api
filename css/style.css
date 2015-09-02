@@ -86,7 +86,7 @@ hr {
 
 dl {
   width: 200px;
-  background-color: ghostwhite;
+  background-color: aliceblue;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
@@ -119,6 +119,10 @@ ul {
   border-radius: 10px;
   border: none;
   font-family: 'Josefin Sans';
+}
+
+#button:hover {
+  cursor: pointer;
 }
 
 input[type="submit"] {
