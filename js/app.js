@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  getLocation();
+
   $('.run-search').submit(function(event){
     var selection = document.getElementById("drop-down");
     field = selection.options[selection.selectedIndex].text;
@@ -11,7 +13,10 @@ $(document).ready(function(){
 
   // --- Geolocation --- //
 
-  function displayLocation(latitude,longitude){
+  function showLocation(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    console.log("Latitude : " + latitude + " Longitude: " + longitude);
     var request = new XMLHttpRequest();
 
     var method = 'GET';
@@ -30,35 +35,28 @@ $(document).ready(function(){
     request.send();
   };
 
-  var successCallback = function(position){
-    var x = position.coords.latitude;
-    var y = position.coords.longitude;
-    displayLocation(x,y);
-  };
-
-  var errorCallback = function(error){
-    var errorMessage = 'Unknown error';
-    switch(error.code) {
-      case 1:
-        errorMessage = 'Permission denied';
-        break;
-      case 2:
-        errorMessage = 'Position unavailable';
-        break;
-      case 3:
-        errorMessage = 'Timeout';
-        break;
+ function errorHandler(err) {
+    if(err.code == 1) {
+       alert("Error: Access is denied!");
     }
-    $("#display-error").html(errorMessage);
-  };
+    
+    else if( err.code == 2) {
+       alert("Error: Position is unavailable!");
+    }
+  }
 
-  var options = {
-    enableHighAccuracy: true,
-    timeout: 1000,
-    maximumAge: 0
-  };
+ function getLocation(){
 
-  navigator.geolocation.getCurrentPosition(successCallback,errorCallback,options);
+    if(navigator.geolocation){
+       // timeout at 60000 milliseconds (60 seconds)
+       var options = {timeout:60000};
+       navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+    }
+    
+    else{
+       alert("Sorry, browser does not support geolocation!");
+    }
+  }
     
 });
 
