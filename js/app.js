@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   $.get("http://ipinfo.io", function (response) {
     area = response.city;
+    country = response.country;
     $("#address").html( response.city + ", " + response.region);
     console.log(area);
     console.log("Current location: " + response.city);
@@ -68,13 +69,14 @@ var getUsers = function(area, field) {
   console.log("reached getUsers");
   var request = {
     city: area,
+    country: country,
     field: field,
     sort: 'views',
     client_id: 'g9hggzThToiGPThHB94XNUhzwkALb8N5'
   };
 
   var result = $.ajax({
-    url: "http://www.behance.net/v2/users?client_id=" + request.client_id + "&sort=" + request.sort + "&city=" + request.city + "&field=" + field,
+    url: "http://www.behance.net/v2/users?client_id=" + request.client_id + "&sort=" + request.sort + "&city=" + request.city + "&country=" + request.country + "&field=" + field,
     data: request,
     dataType: "jsonp"
   })
