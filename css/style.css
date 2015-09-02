@@ -38,7 +38,7 @@ body {
   color: darkgray;
 }
 
-h1, h2, h3, #credits {
+h1, h2, h3, #credits, .search-results {
   font-family: 'Josefin Sans';
   font-weight: 400;
 }
@@ -129,6 +129,10 @@ input[type="submit"] {
 .result {
   color: black;
   border-radius: 15px;
+}
+
+.search-results {
+  text-align: center;
 }
 
 .run-search {

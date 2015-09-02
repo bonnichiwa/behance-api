@@ -19,6 +19,12 @@ $(document).ready(function(){
 });
 
 
+// --- Number of Results --- //
+
+var showSearchResults = function(length) {
+  $('.search-results').text("Number of results for " + field + " Creatives: " + numResults);
+};
+
 // --- Error Message --- //
 var showError = function(error){
   var errorElem = $('.templates .error').clone();
@@ -75,6 +81,11 @@ var getUsers = function(area, field) {
   .done(function(result) {
     console.log(result);
     console.log("Found results");
+
+    // $('.search-results').html(searchResults);
+    numResults = result.users.length;
+    console.log("Numb of results" + numResults);
+    showSearchResults(numResults);
 
     $.each(result.users, function(i, item){
       console.log("Found result users");  
