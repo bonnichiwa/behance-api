@@ -1,9 +1,29 @@
 .container {
   margin: 3em auto;
-  padding: 3em;
-  max-width: 30em;
+  max-width: 22em;
+  border-radius: 15px;
+}
+
+
+.blue-square {
+  max-width: 10em;
+  padding: 3em 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
   background-color: steelblue;
   border-radius: 15px;
+  color: white;
+}
+
+.blue-square  h1 {
+  text-align: center;
+}
+
+.blue-square h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: -.5em;
 }
 
 .template {
@@ -15,15 +35,24 @@
 }
 
 body {
-  color: white;
+  color: darkgray;
 }
 
-h1, h3 {
-  font-family: 'Nixie One';
+h1, h2, h3, #credits {
+  font-family: 'Josefin Sans';
   font-weight: 400;
 }
 
+h1 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
 p, #geolocation {
+  text-align: center;
   font-family: 'Josefin Sans';
 }
 
@@ -32,7 +61,8 @@ p, #geolocation {
 }
 
 hr {
-  max-width: 30em;
+  max-width: 20em;
+  border-style: dashed;
 }
 
 /* Drop down list */
@@ -44,7 +74,9 @@ hr {
   color: white;
   border: solid .5em darkslateblue;
   font-family: 'Josefin Sans';
+
 }
+
 
 /* Search results */
 
@@ -52,13 +84,9 @@ hr {
   text-align: center;
 }
 
-#drop-down {
-  margin-top: 1em;
-}
-
 dl {
   width: 200px;
-  background-color: white;
+  background-color: ghostwhite;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
@@ -69,23 +97,33 @@ dt {
   font-weight: 600;
   line-height: 150%;
   margin-left: 10px;
-  color: darkgray;
+  color: steelblue;
 }
 
 dd {
   font-family: 'Josefin Sans';
   line-height: 150%;
-  color: black;
+  color: darkgray;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 #button {
   font-size: 1em;
-  color: steelblue;
-  padding: .5em .75em;
-  background-color: white;
+  color: white;
+  padding: 1.75em .75em;
+  background-color: steelblue;
   border-radius: 10px;
   border: none;
   font-family: 'Josefin Sans';
+}
+
+input[type="submit"] {
+  white-space: normal;
+  width: 100px;
 }
 
 .result {
@@ -97,4 +135,16 @@ dd {
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: center;
+}
+
+/* Credits */
+
+#credits {
+  text-align: center;
+  font-size: .75em;
+}
+
+#credits img {
+  padding-top: 1em;
+  padding-bottom: 3em;
 }
