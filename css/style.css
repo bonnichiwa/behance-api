@@ -56,8 +56,16 @@ p, #geolocation {
   font-family: 'Josefin Sans';
 }
 
+p {
+  margin-bottom: -1em;
+}
+
 #geolocation {
   text-align: center;
+}
+
+#geo-2 {
+  padding-bottom: 2em;
 }
 
 hr {
@@ -74,7 +82,12 @@ hr {
   color: white;
   border: solid .5em darkslateblue;
   font-family: 'Josefin Sans';
+  margin-bottom: 1em;
+}
 
+#custom-location {
+  margin-bottom: 2em;
+  width: 12em;
 }
 
 
@@ -132,6 +145,10 @@ ul {
 
 #button:hover {
   cursor: pointer;
+}
+
+.button-2 {
+  margin-bottom: 1.5em;
 }
 
 input[type="submit"] {

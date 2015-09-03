@@ -1,18 +1,19 @@
 $(document).ready(function(){
 
-  selection = document.getElementById("drop-down");
-  field = selection.options[selection.selectedIndex].text;
+  getLocation();
 
   $('.run-alternate').submit(function(event){
     custom = document.getElementById("custom-location").value;
+    selection = document.getElementById("drop-down");
+    field = selection.options[selection.selectedIndex].text;
     console.log(custom); 
     $('.results').html('');
     getUsers(custom);
   })
 
-  getLocation();
-
   $('.run-search').submit(function(event){
+    selection = document.getElementById("drop-down");
+    field = selection.options[selection.selectedIndex].text;
     
     console.log(selection);
     $('.results').html('');
@@ -72,8 +73,8 @@ $(document).ready(function(){
 
 // --- Number of Results --- //
 
-var showSearchResults = function(length) {
-  $('.search-results').text("Number of results for " + field + " Creatives: " + numResults);
+var showSearchResults = function(length, city) {
+  $('.search-results').text("Number of results for " + field + " Creatives" + " in " + city + ": " + numResults);
 };
 
 // --- Error Message --- //
@@ -136,7 +137,9 @@ var getUsers = function(address) {
     // $('.search-results').html(searchResults);
     numResults = result.users.length;
     console.log("Numb of results" + numResults);
-    showSearchResults(numResults);
+
+    place = request.city;
+    showSearchResults(numResults, place);
 
     $.each(result.users, function(i, item){
       console.log("Found result users");  
