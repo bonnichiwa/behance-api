@@ -26,14 +26,8 @@
       </div>
       <div class="container">
         <p>Want to connect with others and work on a cool project? Find locals in your area to collaborate with!</p>
+        </div>
     </div>
-    <hr>
-    <div id="geolocation">
-      <p id="geo">Your current location: <span id="address"></span>
-        <span id="addy"></span>
-      </p>
-    </div>
-    <hr>
 
     <div class="search-field">
       <h3>Choose a creative field:</h3>
@@ -170,11 +164,28 @@
       </form>
     </div>
 
-    <div class="search-box" align="center">
+    <hr>
+    <div id="geolocation">
+      <p id="geo">Your current location: <span id="address"></span>
+        <span id="addy"></span>
+      </p>
+      <div class="search-box" align="center">
       <form class="run-search" onsubmit="return false;">
+        <input id="button" type="submit" value="Find Creatives Here!">
+      </form>
+    </div>
+    <hr>
+    <div id="geolocation-alternate">
+      <p>Or enter a city to search in: </p>
+      <div class="search-box" align="center">
+      <form class="run-alternate" onsubmit="return false;">
+        <input type="text" id="custom-location" placeholder="e.g. Brookyln, or Toronto" required> 
+        <br>
         <input id="button" type="submit" value="Find Creatives Now!">
       </form>
     </div>
+
+    
 
     <div class="results-container">
       <div class="search-results"></div>

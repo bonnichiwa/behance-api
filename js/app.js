@@ -1,13 +1,22 @@
 $(document).ready(function(){
 
+  selection = document.getElementById("drop-down");
+  field = selection.options[selection.selectedIndex].text;
+
+  $('.run-alternate').submit(function(event){
+    custom = document.getElementById("custom-location").value;
+    console.log(custom); 
+    $('.results').html('');
+    getUsers(custom);
+  })
+
   getLocation();
 
   $('.run-search').submit(function(event){
-    var selection = document.getElementById("drop-down");
-    field = selection.options[selection.selectedIndex].text;
+    
     console.log(selection);
     $('.results').html('');
-    getUsers(address, state);
+    getUsers(address);
     console.log("search button pressed");
   })
 
@@ -106,18 +115,17 @@ var showUsers = function(user) {
 
 // --- Getting Users --- //
 
-var getUsers = function(address, state) {
+var getUsers = function(address) {
   console.log("reached getUsers");
   var request = {
     city: address,
-    country: state,
     field: field,
     sort: 'views',
     client_id: 'g9hggzThToiGPThHB94XNUhzwkALb8N5'
   };
 
   var result = $.ajax({
-    url: "http://www.behance.net/v2/users?client_id=" + request.client_id + "&sort=" + request.sort + "&city=" + request.city + "&country=" + request.country + "&field=" + field,
+    url: "http://www.behance.net/v2/users?client_id=" + request.client_id + "&sort=" + request.sort + "&city=" + request.city + "&field=" + field,
     data: request,
     dataType: "jsonp"
   })

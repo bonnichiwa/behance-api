@@ -98,17 +98,26 @@ dt {
   line-height: 150%;
   margin-left: 10px;
   color: steelblue;
+  text-align: left;
 }
 
 dd {
   font-family: 'Josefin Sans';
   line-height: 150%;
   color: darkgray;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 ul {
   margin: 0;
   padding: 0;
+  display: inline-block;
+}
+
+.profile-pic {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #button {
